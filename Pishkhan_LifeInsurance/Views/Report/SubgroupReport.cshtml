@@ -1,0 +1,79 @@
+﻿@model Pishkhan_LifeInsurance.Models.ReportViewModels.SubgroupReportGetViewModel
+
+@{
+    ViewData["Title"] = "SubgroupReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>گزارش کارمزد زیر گروه ها</h2>
+
+<form action="SubgroupReport" method="post" target="_blank">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Subgroup" class="control-label"></label>
+                    <select name="ddlSupervisior" class="form-control">
+                        @foreach (var item in Model.Subgroup)
+                        {
+                            <option value="@item.ID">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlYear" class="control-label"></label>
+                    <select name="ddlYear" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlYear)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlMonth" class="control-label"></label>
+                    <select name="ddlMonth" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlMonth)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Setting.Supervisior_Percent" class="control-label"></label>
+                    <input type="text" asp-for="Setting.Supervisior_Percent" name="SubgroupPercent" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Setting.Supervisior_Percent_OldInsurance" class="control-label"></label>
+                    <input type="text" asp-for="Setting.Supervisior_Percent_OldInsurance" name="SubgroupOldInsurancePercent" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Setting.Supervisior_Percent_OutOfOffice" class="control-label"></label>
+                    <input type="text" asp-for="Setting.Supervisior_Percent_OutOfOffice" name="SubgroupOutOfOfficePercent" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input class="btn btn-warning btn-block" type="submit" value="گزارش کارمزد" />
+            </div>
+        </div>
+    </div>
+</form>
+

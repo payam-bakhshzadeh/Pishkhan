@@ -1,0 +1,86 @@
+﻿@model Pishkhan_LifeInsurance.Models.ReportViewModels.AgentReportGetViewModel
+
+@{
+    ViewData["Title"] = "AgentReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>گزارش کارمزد نماینده</h2>
+
+<form action="AgentReport" method="post" target="_blank">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Agent" class="control-label"></label>
+                    <select name="ddlAgent" class="form-control">
+                        @foreach (var item in Model.Agent)
+                        {
+                            <option value="@item.ID">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlYear" class="control-label"></label>
+                    <select name="ddlYear" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlYear)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlMonth" class="control-label"></label>
+                    <select name="ddlMonth" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlMonth)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="From_InsuranceNumber" class="control-label">از شماره بیمه نامه</label>
+                    <input class="form-control" name="From_InsuranceNumber" type="number" asp-for="From_InsuranceNumber" value="" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="To_InsuranceNumber" class="control-label">تا شماره بیمه نامه</label>
+                    <input class="form-control" name="To_InsuranceNumber" type="number" asp-for="To_InsuranceNumber" value="" />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="text-danger">شماره بیمه نامه های تایپ شده در فیلتر نیز خواهد آمد</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input class="btn btn-warning btn-block" type="submit" value="گزارش کارمزد" />
+            </div>
+        </div>
+        @if (ViewBag.pm != null)
+        {
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="text-danger">@ViewBag.pm</h2>
+                </div>
+                
+            </div>
+        }
+
+    </div>
+</form>
+

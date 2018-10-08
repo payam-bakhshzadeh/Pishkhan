@@ -1,0 +1,3 @@
+﻿function hidePm() {
+    $('#pm').hide();
+}

@@ -1,0 +1,72 @@
+﻿@model Pishkhan_LifeInsurance.Models.ReportViewModels.PishkhanReportGetViewModel
+@{
+    ViewData["Title"] = "PishkhanReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>گزارش کارمزد دفاتر پیشخوان</h2>
+
+<form action="PishkhanReport" method="post" target="_blank">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Pishkhan" class="control-label"></label>
+                    <select name="ddlPishkhan" class="form-control">
+                        @foreach (var item in Model.Pishkhan)
+                        {
+                            <option value="@item.ID">@item.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlYear" class="control-label"></label>
+                    <select name="ddlYear" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlYear)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="YearAndMonth.ddlMonth" class="control-label"></label>
+                    <select name="ddlMonth" class="form-control">
+                        @foreach (var item in Model.YearAndMonth.ddlMonth)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Setting.Pishkhan_Percent" class="control-label"></label>
+                    <input type="text" asp-for="Setting.Pishkhan_Percent"  class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Setting.Pishkhan_Percent_OldInsurance" class="control-label"></label>
+                    <input type="text" asp-for="Setting.Pishkhan_Percent_OldInsurance" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input class="btn btn-warning btn-block" type="submit" value="گزارش کارمزد" />
+            </div>
+        </div>
+    </div>
+</form>
+

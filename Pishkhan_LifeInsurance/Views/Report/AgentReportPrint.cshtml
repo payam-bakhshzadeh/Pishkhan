@@ -1,0 +1,88 @@
+﻿@model List<Pishkhan_LifeInsurance.Models.ReportViewModels.ReportTableViewModel>
+@{
+    ViewData["Title"] = "AgentReportPrint";
+    Layout = "~/Views/Shared/_PrintLayout.cshtml";
+
+    int row =0 ;
+
+    int total = 0;
+
+    foreach (var item in Model)
+    {
+        total += item.Wage;
+    }
+}
+
+
+<div class="container">
+    <div class="text-center"><h2>گزارش کارمزد نماینده @ViewBag.AgentName مربوط به @ViewBag.Year/@ViewBag.Month</h2></div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading" >کارمز واریز شده به حساب @ViewBag.AgentName</div>
+        <div class="panel-body" id="firstBody">
+
+            @if (Model != null)
+            {
+                <table class="table-condensed table-hover table-responsive table-striped table">
+
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>شماره سریال بیمه نامه</th>
+                            <th>شماره بیمه نامه</th>
+                            <th>نام بیمه گذار</th>
+                            <th>نام بیمه شده</th>
+                            <th>تاریخ صدور</th>
+                            <th>حق بیمه - ریال</th>
+                            <th>نحوه پرداخت</th>
+                            <th>وضعیت</th>
+                            <th>کارمزد-ریال</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@(row += 1)</td>
+                                <td>@item.Serial</td>
+                                <td>@item.InsuranceNumber</td>
+                                <td>@item.BimegozarName</td>
+                                <td>@item.BimeshodeName</td>
+                                <td>@item.SoodoorDate</td>
+                                <td>@item.Price.MoneyToPrice()</td>
+                                <td>@item.PaymentType ماهه</td>
+
+                                @if (item.Status)
+                                {
+                                    <td class="text-success">فعال</td>
+
+                                }
+                                else
+                                {
+                                    <td class="text-danger">غیر فعال</td>
+
+                                }
+
+                                <td>@item.Wage.MoneyToPrice()</td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <td colspan="9" class="text-center"><h3>جمع کل</h3> </td>
+                            <td><h3>@total.MoneyToPrice()</h3></td>
+                        </tr>
+                    </tbody>
+
+
+
+
+                </table>
+
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojResolveAssemblyReference.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojResolveAssemblyReference.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev18\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojResolveAssemblyReference.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev19\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojResolveAssemblyReference.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+C:\Users\Payam\Desktop\Pishkhan_LifeInsurance_rev20\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojResolveAssemblyReference.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+F:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev20_این نسخه آخرین نسخه بوده و در حال استفاده می باشد\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojAssemblyReference.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.deps.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.runtimeconfig.dev.json
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\bin\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csprojAssemblyReference.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.csproj.CoreCompileInputs.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfoInputs.cache
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.AssemblyInfo.cs
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.dll
+G:\VisualStadio_Projects\pishkhan\Pishkhan_LifeInsurance_rev21-نسخه در حال استفاده\Pishkhan_LifeInsurance\obj\Release\netcoreapp2.0\Pishkhan_LifeInsurance.pdb

@@ -1,0 +1,41 @@
+﻿@model Pishkhan_LifeInsurance.Models.ReportViewModels.InsuranceReportGetViewModel
+@{
+    ViewData["Title"] = "InsuranceReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center"><h2>گزارش کارمزد بیمه نامه های صادره</h2></div>
+
+<form asp-action="InsuranceReport" method="post" target="_blank">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="YearAndMonth.ddlYear" class="control-label"></label>
+                <select name="ddlYear" class="form-control">
+                    @foreach (var item in Model.YearAndMonth.ddlYear)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="YearAndMonth.ddlMonth" class="control-label"></label>
+                <select name="ddlMonth" class="form-control">
+                    @foreach (var item in Model.YearAndMonth.ddlMonth)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit"value="نمایش گزارش" class="btn btn-warning btn-block"/>  
+        </div>
+    </div>
+</form>
+

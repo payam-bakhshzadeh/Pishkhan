@@ -1,0 +1,78 @@
+﻿@model List<Pishkhan_LifeInsurance.Data.DataBase.TblSupervisior>
+@{
+    ViewData["Title"] = "SupervisiorList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int row = 0;
+}
+
+<h2>لیست زیر گروه ها</h2>
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th class="text-center text-primary">
+                ردیف
+            </th>
+            <th class="text-center text-primary">
+                نام زیرگروه ها
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(row += 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a href="#" class="edit btn btn-warning btn-sm" id="@item.ID" title="edit user info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@*Modal*@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="glyphicon glyphicon-user text-primary"> User Information</i></h4>
+            </div>
+            <div class="modal-body form-group">
+                <div id="content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>نام زیرگروه</label>
+                            <input type="text" class="form-control" value="" id="supervisiorName" />
+                        </div>
+                    </div>
+                    <br />
+                    <input type="hidden" name="name" value="" id="supervisiorId" />
+                </div>
+
+                @*Loading*@
+                <div class="text-center" id="loading"><img src="~/LoadingIcon.gif" /></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" id="btnUpdatePressed">Update</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+@*End Modal*@
+
+@section Scripts {
+
+    <script src="~/js/SupervisiorListJavaScript.js"></script>
+}

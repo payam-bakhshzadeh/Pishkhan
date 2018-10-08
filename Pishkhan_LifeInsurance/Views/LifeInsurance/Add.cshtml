@@ -1,0 +1,288 @@
+﻿@model Pishkhan_LifeInsurance.Views.LifeInsurance.AddViewModels
+
+@{
+    ViewData["Title"] = "ثبت / اصلاح بیمه نامه عمر";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string ddlValue = "";
+}
+<h2>ثبت / اصلاح بیمه نامه عمر</h2>
+
+<hr />
+<div class="row">
+
+    @if (ViewBag.pm == "ok")
+    {
+        <div id="pm" class="bg-success text-center"><i class="text-primary">اطلاعات با موفقیت ثبت گردید</i></div>
+    }
+    else if (ViewBag.pm == "error")
+    {
+        <div id="pm" class="bg-danger text-center"><i class="text-primary">خطا.اطلاعات در دیتابیس ذخیره نگردید</i></div>
+    }
+
+    <div class="col-md-12">
+        <form asp-action="Add" id="myForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*start deopdownlist*@
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.UserID" class="control-label"></label>
+                        <select class="form-control" name="ddlAgent" id="ddlAgent" tabindex="1">
+                            @foreach (var item in Model.AgentVM)
+                            {
+                                @(ddlValue = item.Name)
+                                <option value="@item.ID">@ddlValue</option>
+                            }
+                        </select>
+                        <span asp-validation-for="LifeInsuranceVM.UserID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.PishkhanID" class="control-label"></label>
+                        <select asp-for="LifeInsuranceVM.PishkhanID" class="form-control" name="ddlPishkhan" id="ddlPishkhan" tabindex="2">
+                            <option value="0"></option>
+                            @foreach (var item in Model.PishkhanVm)
+                            {
+                                @(ddlValue = item.Name)
+                                <option value="@item.ID">@ddlValue</option>
+                            }
+                        </select>
+                        <span asp-validation-for="LifeInsuranceVM.PishkhanID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.SupervisorID" class="control-label"></label>
+                        <select asp-for="LifeInsuranceVM.SupervisorID" class="form-control" name="ddlSupervisior" id="ddlSupervisior" tabindex="3">
+                            <option value="0"></option>
+                            @foreach (var item in Model.SupervisiorVm)
+                            {
+                                @(ddlValue = item.Name)
+                                <option value="@item.ID">@ddlValue</option>
+                            }
+                        </select>
+                        <span asp-validation-for="LifeInsuranceVM.SupervisorID" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*end dropdownlist*@
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Serial" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Serial" class="form-control" tabindex="4" onfocus="this.select();" id="txtSerial"/>
+                        <span asp-validation-for="LifeInsuranceVM.Serial" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            @*start insurance number*@
+            <h5 class="text-primary">شماره بیمه نامه</h5>
+            <hr />
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.InsuranceNumber_Code" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.InsuranceNumber_Code" class="form-control" tabindex="18"/>
+                        <span asp-validation-for="LifeInsuranceVM.InsuranceNumber_Code" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.InsuranceNumber_CenterCode" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.InsuranceNumber_CenterCode" class="form-control" tabindex="19"/>
+                        <span asp-validation-for="LifeInsuranceVM.InsuranceNumber_CenterCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.InsuranceNumber_GarardadNumber" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.InsuranceNumber_GarardadNumber" class="form-control" tabindex="20"/>
+                        <span asp-validation-for="LifeInsuranceVM.InsuranceNumber_GarardadNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.InsuranceNumber_Year" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.InsuranceNumber_Year" class="form-control" tabindex="21"/>
+                        <span asp-validation-for="LifeInsuranceVM.InsuranceNumber_Year" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.InsuranceNumber_Number" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.InsuranceNumber_Number" class="form-control" tabindex="5" onfocus="this.select();"/>
+                        <span asp-validation-for="LifeInsuranceVM.InsuranceNumber_Number" class="text-danger" ></span>
+                    </div>
+                </div>
+            </div>
+            @*end ensurance number*@
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Bimegozar_Name" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Bimegozar_Name" class="form-control" tabindex="6" id="txtBimegozarname"/>
+                        <span asp-validation-for="LifeInsuranceVM.Bimegozar_Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Bimeshode_Name" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Bimeshode_Name" class="form-control" tabindex="7" id="txtBimeshodename"/>
+                        <span asp-validation-for="LifeInsuranceVM.Bimeshode_Name" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Bimegozar_Phone" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Bimegozar_Phone" class="form-control" tabindex="8" id="txtBimegozarphone"/>
+                        <span asp-validation-for="LifeInsuranceVM.Bimegozar_Phone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Bimeshode_Phone" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Bimeshode_Phone" class="form-control" tabindex="9" id="txtBimeshodephone"/>
+                        <span asp-validation-for="LifeInsuranceVM.Bimeshode_Phone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Date_Soodoor_Shamsi" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Date_Soodoor_Shamsi" type="text" class="form-control" tabindex="10" id="txtDatesoodoor"/>
+                        <span asp-validation-for="LifeInsuranceVM.Date_Soodoor_Shamsi" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Date_Start_Shamsi" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Date_Start_Shamsi" type="text" class="form-control" tabindex="11" id="txtDatestart"/>
+                        <span asp-validation-for="LifeInsuranceVM.Date_Start_Shamsi" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Date_Soodoor_Miladi" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Date_Soodoor_Miladi" type="text" class="form-control" tabindex="30" id="txtDatesoodoorMiladi" />
+                        <span asp-validation-for="LifeInsuranceVM.Date_Soodoor_Miladi" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Date_Start_Miladi" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Date_Start_Miladi" type="text" class="form-control" tabindex="31" id="txtDatestartMiladi" />
+                        <span asp-validation-for="LifeInsuranceVM.Date_Start_Miladi" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Payment_Price" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.Payment_Price" type="text" class="form-control" tabindex="12" onfocus="this.select();"/>
+                        <span asp-validation-for="LifeInsuranceVM.Payment_Price" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.SepordeAvaliye" class="control-label"></label>
+                        <input asp-for="LifeInsuranceVM.SepordeAvaliye" class="form-control" tabindex="13" id="sepordeAvaliye"/>
+                        <span asp-validation-for="LifeInsuranceVM.SepordeAvaliye" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.PaymentType" class="control-label"></label>
+                        <select asp-for="LifeInsuranceVM.PaymentType" class="form-control" name="ddlPaymentType" id="ddlPaymentType" tabindex="14">
+                            @foreach (var item in Model.PaymentType)
+                            {
+                                switch (item)
+                                {
+                                    case "ماهانه":
+                                        <option value="1">@item</option>
+                                        break;
+                                    case "سه_ماهه":
+                                        <option value="3">@item</option>
+                                        break;
+                                    case "شش_ماهه":
+                                        <option value="6">@item</option>
+                                        break;
+                                    case "سالانه":
+                                        <option value="12">@item</option>
+                                        break;
+                                }
+
+
+
+                            }
+                        </select>
+                        <span asp-validation-for="LifeInsuranceVM.PaymentType" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="LifeInsuranceVM.Insurance_Status" class="control-label"></label>
+                        <select asp-for="LifeInsuranceVM.Insurance_Status" class="form-control" name="ddlInsuranceStatus" id="ddlInsuranceStatus" tabindex="15">
+                            @foreach (var item in Model.InsuranceStatus)
+                            {
+                                switch (item)
+                                {
+                                    case "فعال":
+                                        <option selected="selected" value="1">@item</option>
+                                        break;
+                                    case "غیرفعال":
+                                        <option selected="selected" value="0">@item</option>
+                                        break;
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="LifeInsuranceVM.PaymentType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @if (Model.LifeInsuranceVM.ID > 0)
+                {
+
+                    //<a value="اصلاح بیمه نامه عمر" class="btn btn-warning" id="btnAdd" tabindex="17"/>
+                    <a href="#" class="btn btn-warning" id="btnAdd" tabindex="17">اصلاح بیمه نامه عمر</a>
+                }
+
+                else
+                {
+
+                    //<button value="ثبت بیمه نامه عمر" class="btn btn-success" id="btnAdd" tabindex="16"/>
+                    <a href="#" class="btn btn-success" id="btnAdd" tabindex="16">ثبت بیمه نامه عمر</a>
+                }
+
+
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-controller="Home" asp-action="Index">برگشت به صفحه اصلی</a>
+</div>
+<input type="hidden" name="ID" asp-for="LifeInsuranceVM.ID" value="@Model.LifeInsuranceVM.ID" />
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/AddLifeInsuranceJavaScript.js"></script>
+}
+

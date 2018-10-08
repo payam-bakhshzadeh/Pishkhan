@@ -1,0 +1,284 @@
+﻿@model Pishkhan_LifeInsurance.Models.ReportViewModels.PishkhanReportPostViewModel
+
+@{
+    ViewData["Title"] = "PishkhanReportPrint";
+    Layout = "~/Views/Shared/_PrintLayout.cshtml";
+
+
+    int row1 = 0;
+    int row2 = 0;
+    int row3 = 0;
+
+    int totalFirst = 0;
+    int totalFirstPishkhan = 0;
+    int totalDouble = 0;
+    int totalDoublePishkhan = 0;
+    int totalNoPrice = 0;
+
+    if (Model.FirstWage != null)
+    {
+        foreach (var item in Model.FirstWage)
+        {
+            totalFirst += item.Wage;
+        }
+
+    }
+
+    if (Model.FirstWage != null)
+    {
+        foreach (var item in Model.FirstWage)
+        {
+            totalFirstPishkhan += (item.Wage * (Model.FirstWagePercent)/100);
+        }
+
+    }
+
+
+
+    if (Model.DoubleWage != null)
+    {
+        foreach (var item in Model.DoubleWage)
+        {
+            totalDouble += item.Wage;
+        }
+
+    }
+
+    if (Model.DoubleWage != null)
+    {
+        foreach (var item in Model.DoubleWage)
+        {
+            totalDoublePishkhan += item.Wage * (Model.DoubleWagePercent)/100;
+        }
+
+    }
+
+    if (Model.NoPriceWage != null)
+    {
+        foreach (var item in Model.NoPriceWage)
+        {
+            totalNoPrice += item.Wage;
+        }
+
+    }
+}
+
+<div class="container">
+    <div class="text-center"><h2>گزارش کارمزد بیمه نامه های صادره مربوط به دفتر پیشخوان @ViewBag.PishkhanName @ViewBag.Year/@ViewBag.Month</h2></div>
+    @*بیمه نامه هایی که برای اولین بار کارمزد آنها واریز شده*@
+    <div id="firstPanel" class="panel panel-primary">
+        <div class="panel-heading" id="firstHeader">بیمه نامه یی که برای اولین بار کارمزد واریز شده</div>
+        <div class="panel-body" id="firstBody">
+
+            @if (Model.FirstWage != null)
+            {
+                <table class="table-condensed table-hover table-responsive table-striped table">
+
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>شماره سریال بیمه نامه</th>
+                            <th>شماره بیمه نامه</th>
+                            <th>نام بیمه گذار</th>
+                            <th>نام بیمه شده</th>
+                            <th>تاریخ صدور</th>
+                            <th>حق بیمه - ریال</th>
+                            <th>نحوه پرداخت</th>
+                            <th>وضعیت</th>
+                            <th>کارمزد کل-ریال</th>
+                            <th>کارمزد دفتر پیشخوان - @Model.FirstWagePercent %</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model.FirstWage)
+                        {
+                            <tr>
+                                <td>@(row1 += 1)</td>
+                                <td>@item.Serial</td>
+                                <td>@item.InsuranceNumber</td>
+                                <td>@item.BimegozarName</td>
+                                <td>@item.BimeshodeName</td>
+                                <td>@item.SoodoorDate</td>
+                                <td>@item.Price.MoneyToPrice()</td>
+                                <td>@item.PaymentType ماهه</td>
+
+                                @if (item.Status)
+                                {
+                                    <td class="text-success">فعال</td>
+
+                                }
+                                else
+                                {
+                                    <td class="text-danger">غیر فعال</td>
+
+                                }
+
+                                <td>@item.Wage.MoneyToPrice()</td>
+                                <td>@((item.Wage * (Model.FirstWagePercent)/100).MoneyToPrice())</td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <td colspan="9" class="text-center"><h3>جمع کل</h3> </td>
+                            <td><h3>@totalFirst.MoneyToPrice()</h3></td>
+                            <td><h3>@totalFirstPishkhan.MoneyToPrice()</h3></td>
+                        </tr>
+                    </tbody>
+
+
+
+
+                </table>
+
+            }
+
+        </div>
+    </div>
+
+
+
+    @*بیمه نامه هایی که برای بار دوم کارمزد آنها واریز شده*@
+    <div id="doublePanel" class="panel panel-primary">
+        <div class="panel-heading" id="doubleHeader">بیمه نامه هایی که برای چندمین بار کارمزد واریز شده</div>
+        <div class="panel-body" id="doubleBody">
+
+            @if (Model.DoubleWage != null)
+            {
+                <table class="table-condensed table-hover table-responsive table-striped table">
+
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>شماره سریال بیمه نامه</th>
+                            <th>شماره بیمه نامه</th>
+                            <th>نام بیمه گذار</th>
+                            <th>نام بیمه شده</th>
+                            <th>تاریخ صدور</th>
+                            <th>حق بیمه - ریال</th>
+                            <th>نحوه پرداخت</th>
+                            <th>وضعیت</th>
+                            <th>کارمزد کل-ریال</th>
+                            <th>کارمزد دفتر پیشخوان - @Model.DoubleWagePercent %</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model.DoubleWage)
+                        {
+                            <tr>
+                                <td>@(row2 += 1)</td>
+                                <td>@item.Serial</td>
+                                <td>@item.InsuranceNumber</td>
+                                <td>@item.BimegozarName</td>
+                                <td>@item.BimeshodeName</td>
+                                <td>@item.SoodoorDate</td>
+                                <td>@item.Price.MoneyToPrice()</td>
+                                <td>@item.PaymentType ماهه</td>
+ 
+                                @if (item.Status)
+                                {
+                                    <td class="text-success">فعال</td>
+
+                                }
+                                else
+                                {
+                                    <td class="text-danger">غیر فعال</td>
+
+                                }
+                                <td>@item.Wage.MoneyToPrice()</td>
+                                <td>@((item.Wage * (Model.DoubleWagePercent) / 100).MoneyToPrice())</td>
+                            </tr>
+                        }
+
+                        <tr>
+                            <td colspan="9" class="text-center"><h3>جمع کل</h3> </td>
+                            <td><h3>@totalDouble.MoneyToPrice()</h3></td>
+                            <td><h3>@totalDoublePishkhan.MoneyToPrice()</h3></td>
+                        </tr>
+                    </tbody>
+
+
+
+
+                </table>
+
+            }
+
+
+        </div>
+    </div>
+    @*بیمه نامه هایی که برای آنها کارمزد واریز نشده*@
+    <div id="noPricePanel" class="panel panel-primary">
+        <div class="panel-heading" id="noPriceHeader">بیمه نامه هایی که برای آنها کارمزد واریز نشده</div>
+        <div class="panel-body" id="noPriceBody">
+
+            @if (Model.NoPriceWage != null)
+            {
+                <table class="table-condensed table-hover table-responsive table-striped table">
+
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>شماره سریال بیمه نامه</th>
+                            <th>شماره بیمه نامه</th>
+                            <th>نام بیمه گذار</th>
+                            <th>نام بیمه شده</th>
+                            <th>تاریخ صدور</th>
+                            <th>حق بیمه - ریال</th>
+                            <th>نحوه پرداخت</th>
+                            <th>وضعیت</th>
+                            <th>کارمزد-ریال</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        @foreach (var item in Model.NoPriceWage)
+                        {
+                            <tr>
+                                <td>@(row3 += 1)</td>
+                                <td>@item.Serial</td>
+                                <td>@item.InsuranceNumber</td>
+                                <td>@item.BimegozarName</td>
+                                <td>@item.BimeshodeName</td>
+                                <td>@item.SoodoorDate</td>
+                                <td>@item.Price.MoneyToPrice()</td>
+                                <td>@item.PaymentType ماهه</td>
+
+                                @if (item.Status)
+                                {
+                                    <td class="text-success">فعال</td>
+
+                                }
+                                else
+                                {
+                                    <td class="text-danger">غیر فعال</td>
+
+                                }
+                                <td>@item.Wage.MoneyToPrice()</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td colspan="9" class="text-center"><h3>جمع کل</h3> </td>
+                            <td><h3>@totalNoPrice.MoneyToPrice()</h3></td>
+                        </tr>
+                    </tbody>
+
+
+
+
+                </table>
+
+            }
+
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/js/InsuranceReportJavaScript.js"></script>
+}
+

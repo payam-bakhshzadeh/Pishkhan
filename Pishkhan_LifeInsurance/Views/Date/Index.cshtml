@@ -1,0 +1,38 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Convert Date</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        Final Result : @ViewBag.pm;'
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        Total Item Count : @ViewBag.totalItemCount;'
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        Need To Change : @ViewBag.NeedToChange;'
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        Success : @ViewBag.Success;'
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        Error : @ViewBag.Error;'
+    </div>
+</div>

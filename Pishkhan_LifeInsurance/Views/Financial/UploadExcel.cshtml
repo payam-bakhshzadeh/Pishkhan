@@ -1,0 +1,51 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "UploadExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int row = 0;
+}
+<h2>Upload Excel Files</h2>
+<div class="text-danger">@Html.ValidationSummary()</div>
+<form asp-controller="Financial" asp-action="UploadExcel" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Please Select Your Excel Files:</p>
+                <input class="btn btn-warning btn-block btn-lg" type="file" name="ExcelFiles" multiple />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 form-group">
+            <input class="btn btn-primary" type="submit" value="Upload" />
+        </div>
+    </div>
+</form>
+<label class="text-warning"><span>A : </span> <span>کارمزد ها</span></label>
+<br />
+<label class="text-warning"><span>B : </span> <span>شماره بیمه نامه</span></label>
+<br /><hr />
+
+@*Start Table*@
+<h3 class="text-warning">Files List:</h3>
+@if (Model != null)
+{
+    <div class="text-center" id="loading"><img src="~/LoadingIcon.gif" /></div>
+    <table class="table table-hover table-responsive">
+        @foreach (var item in Model)
+        {
+            <tr id="@(row += 1)">
+                <td>@row</td>
+                <td><a href="#" class="text-danger excelFileName" rowid="@row" id="@item"><i class="glyphicon glyphicon-trash"></i></a></td>
+                <td><a href="~/uploads/@item">@item</a></td>
+            </tr>
+        }
+
+    </table>
+}
+    @*End Table*@
+
+
+    @section Scripts {
+        <script src="~/js/UploadExcelJavaScript.js"></script>
+    }

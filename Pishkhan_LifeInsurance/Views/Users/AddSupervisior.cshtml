@@ -1,0 +1,34 @@
+﻿@model Pishkhan_LifeInsurance.Data.DataBase.TblSupervisior
+@{
+    ViewData["Title"] = "AddSupervisior";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>زیرگروه ها</h2>
+<h4>ایجاد زیرگروه جدید</h4>
+<hr />
+<div class="row">
+    @if (ViewBag.pm == "ok")
+    {
+        <div id="pm" class="bg-success text-center"><i class="text-primary">اطلاعات با موفقیت ثبت گردید</i></div>
+    }
+    <div class="col-md-4">
+        <form asp-action="AddSupervisior">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" id="txtNameSupervisior" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-controller="Home" asp-action="Index">بازگشت به صفحه اصلی</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/AddSupervisiorJavaScript.js"></script>
+}

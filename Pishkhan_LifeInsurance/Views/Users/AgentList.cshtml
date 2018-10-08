@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Pishkhan_LifeInsurance.Models.AgentViewModels.AgentListViewModels>
+@{
+    ViewData["Title"] = "AgentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int row = 0;
+}
+<h2>لیست نمایندگان</h2>
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th class="text-center text-primary">
+                ردیف
+            </th>
+            <th class="text-center text-primary">
+                کد نمایندگی
+            </th>
+            <th class="text-center text-primary">
+                نام و نام خانوادگی
+            </th>
+            <th class="text-center text-primary">
+                ایمیل
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(row += 1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgentID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @*<input type="button" id="@item.ID" value="Edit" class="edit btn btn-warning" data-toggle="modal" data-target="#myModal" />*@
+                    <a href="#" class="edit btn btn-warning btn-sm" id="@item.ID" title="edit user info" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*Modal*@
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="glyphicon glyphicon-user text-primary"> UserInformation</i></h4>
+            </div>
+            <div class="modal-body form-group">          
+                <div id="content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>کد نمایندگی</label>
+                            <input type="text" class="form-control" value="" id="agentID"/>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>نام و نام خانوادگی</label>
+                            <input type="text" class="form-control" value="" id="agentName" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>ایمیل</label>
+                            <input type="text" class="form-control" value="" id="agentEmail"/>
+                        </div>
+                    </div>
+                    <input type="hidden" name="name" value="" id="userId"/>
+                </div>
+
+                @*Loading*@
+                <div class="text-center" id="loading"><img src="~/LoadingIcon.gif" /></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" id="btnUpdatePressed">Update</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+@*End Modal*@
+
+
+
+@section Scripts {
+
+    <script src="~/js/AgentListJavaScript.js"></script>
+}
+
+

@@ -1,0 +1,247 @@
+﻿@model Pishkhan_LifeInsurance.Models.ManageViewModels.ListInsuranceViewModel
+@{
+    ViewData["Title"] = "لیست بیمه نامه های عمر";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string ddlValue = "";
+    int row = 0;
+
+    int totalSale = 0;
+
+    foreach (var item in Model.TabelItemsVM)
+    {
+        totalSale += (item.Price * item.PaymentType);
+    }
+}
+
+<h2>لیست بیمه نامه های عمر</h2>
+<hr />
+<span class="text-danger text-center">@ViewBag.pm</span>
+@*Filter*@
+<div class="row table-bordered">
+    <div id="showFilter" class="col-md-12" style="background-color:gainsboro;">
+        <a href="#" class="btn text-right"><i class="glyphicon glyphicon-filter">Filter</i></a>
+    </div>
+    <br />
+    <form asp-action="Filter" asp-controller="LifeInsurance" method="post">
+        <div class="col-md-12 form-group container" id="filterContent">
+            <div class="row">
+                <br />
+                <div class="col-md-4">
+                    <label>نماینده</label>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <select onchange="ddlAgentChange()" class="form-control" name="ddlAgent" id="ddlAgent" tabindex="1">
+                        <option value="0">...</option>
+                        @foreach (var item in Model.AgentListVM)
+                        {
+                            @(ddlValue = item.Name)
+                            <option value="@item.ID">@ddlValue</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>زیرگروه</label>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <select onchange="ddlSupervisiorChange()" class="form-control" name="ddlSupervisior" id="ddlSupervisior" tabindex="2">
+                        <option value="0">...</option>
+                        @foreach (var item in Model.SupervisiorListVM)
+                        {
+                            @(ddlValue = item.Name)
+                            <option value="@item.ID">@ddlValue</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>دفتر پیشخوان</label>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <select onchange="ddlPishkhanChange()" class="form-control" name="ddlPishkhan" id="ddlPishkhan" tabindex="3">
+                        <option value="0">...</option>
+                        @foreach (var item in Model.PishkhanListVM)
+                        {
+                            @(ddlValue = item.Name)
+                            <option value="@item.ID">@ddlValue</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <label>شماره بیمه نامه</label>
+                    <i class="glyphicon glyphicon-barcode"></i>
+                    <input type="text" onchange="txtInsuranceNumberChange()" asp-for="FilterItemsVM.InsuranceNumber" id="txtInsuranceNumber" class="form-control" value="" tabindex="4" />
+                </div>
+                <div class="col-md-4">
+                    <label>شماره سریال بیمه نامه</label>
+                    <i class="glyphicon glyphicon-barcode"></i>
+                    <input type="text" onchange="txtSerialNumberChange()" asp-for="FilterItemsVM.InsuranceSerial" id="txtSerialNumber" class="form-control" value="" tabindex="5" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <label>تاریخ صدور از</label>
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <input type="text" onchange="txtDateSoodoorChange()" asp-for="FilterItemsVM.FromDate_Soodoor" id="txtFromDateSoodoor" class="form-control" value="" tabindex="6" />
+                </div>
+                <div class="col-md-3">
+                    <label>تاریخ صدور تا</label>
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <input type="text" onchange="txtDateSoodoorChange()" asp-for="FilterItemsVM.ToDate_Soodoor" id="txtToDateSoodoor" class="form-control" value="" tabindex="7" />
+                </div>
+                <div class="col-md-3">
+                    <label>تاریخ شروع از</label>
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <input type="text" onchange="txtDateStartChange()" asp-for="FilterItemsVM.FromDate_Start" id="txtFromDateStart" class="form-control" value="" tabindex="8" />
+                </div>
+                <div class="col-md-3">
+                    <label>تاریخ شروع تا</label>
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    <input type="text" onchange="txtDateStartChange()" asp-for="FilterItemsVM.ToDate_Start" id="txtToDateStart" class="form-control" value="" tabindex="9" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <label>نام و نام خانوادگی بیمه گذار</label>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <input type="text" onchange="txtNameChange()" asp-for="FilterItemsVM.BimegozarName" id="txtBimegozarName" class="form-control" value="" tabindex="10" />
+                </div>
+                <div class="col-md-3">
+                    <label>نام و نام خانوادگی بیمه شده</label>
+                    <i class="glyphicon glyphicon-user"></i>
+                    <input type="text" onchange="txtNameChange()" asp-for="FilterItemsVM.BimeshodeName" id="txtBimeShodeName" class="form-control" value="" tabindex="11" />
+                </div>
+                <div class="col-md-3">
+                    <label>تلفن بیمه گذار</label>
+                    <i class="glyphicon glyphicon-phone"></i>
+                    <input type="text" onchange="txtPhoneChange()" asp-for="FilterItemsVM.BimegozarPhone" id="txtBimegozarPhone" class="form-control" value="" tabindex="12" />
+                </div>
+                <div class="col-md-3">
+                    <label>تلفن بیمه شده</label>
+                    <i class="glyphicon glyphicon-phone"></i>
+                    <input type="text" onchange="txtPhoneChange()" asp-for="FilterItemsVM.BimeshodePhone" id="txtBimeShodePhone" class="form-control" value="" tabindex="13" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div class="col-md-3">
+                    <input type="submit" value="Filter" class="btn btn-warning" />
+                    <a href="#" id="btnCloseFilter" class="btn btn-danger"><i class="glyphicon glyphicon-folder-close"> Close</i></a>                   
+                    <input type="reset" value="Reset" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<hr />
+@*End Filter*@
+
+@*Start Table*@
+
+@if (Model.TabelItemsVM != null)
+{
+    <div>
+        <table id="tbl" class="table table-bordered table-condensed table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th class="text-center text-primary">ردیف</th>
+                    <th class="text-center text-primary">شماره بیمه نامه</th>
+                    <th class="text-center text-primary">نمایندگی</th>
+                    <th class="text-center text-primary">زیرگروه</th>
+                    <th class="text-center text-primary">دفترپیشخوان</th>
+                    <th class="text-center text-primary">نام بیمه گذار</th>
+                    <th class="text-center text-primary">نام بیمه شده</th>
+                    <th class="text-center text-primary">تاریخ صدور</th>
+                    <th class="text-center text-primary">تاریخ شروع</th>
+                    <th class="text-center text-primary">نحوه پرداخت</th>
+                    <th class="text-center text-primary">حق بیمه ماهانه - ریال</th>
+                    <th class="text-center text-primary">وضعیت بیمه نامه</th>
+                    <th class="text-center text-primary">میزان فروش-روش پرداخت - ریال</th>
+                    <th class="text-center text-primary">تاریخ ثبت بیمه نامه</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.TabelItemsVM)
+                {
+                    <tr id="@item.ID">
+                        <td>@(row += 1)</td>
+                        <td>@item.InsuranceNumber</td>
+                        <td>@item.Agent</td>
+                        <td>
+                            @if (item.Supervisior != null)
+                            {
+                                @item.Supervisior
+                            }
+                        </td>
+                        <td>
+                            @if (item.Pishkhan != null)
+                            {
+                                @item.Pishkhan
+                            }
+                        </td>
+                        <td>@item.BimegozarName</td>
+                        <td>@item.BimeshodeName</td>
+                        <td>@item.DateSoodoor</td>
+                        <td>@item.DateStart</td>
+                        <td>@item.PaymentType ماهه</td>
+                        <td>@item.Price.MoneyToPrice()</td>
+                        @if (item.Status)
+                        {
+
+                            <td class="text-success">فعال</td>
+                        }
+                        else
+                        {
+
+                            <td class="text-danger">غیر فعال</td>
+                        }
+
+                        <td>@((item.Price * item.PaymentType).MoneyToPrice())</td>
+
+                        <td>@item.TarikhSabtBimename</td>
+                        
+                        <td>
+                            <span>
+                                <a href="/LifeInsurance/Add/@item.ID" style="margin:10px;" title="Update"><i class="glyphicon glyphicon-upload text-success"></i></a>
+                            </span>
+                            <span>
+                                <a onclick="deleteRow(@item.ID)" href="#" style="margin:10px;" title="Delete"><i class="glyphicon glyphicon-remove text-danger"></i></a>
+                            </span>
+                        </td>
+                    </tr>
+                }
+
+                <tr>
+                    <td colspan="12" class="text-center"><h3>جمع کل فروش بر حسب نحوه پرداخت</h3></td>
+                    <td class="text-center"> <h3>@totalSale.MoneyToPrice()</h3></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" id="loading">
+            <img src="~/LoadingIcon.gif" />
+        </div>
+    </div>
+}
+    @*End Table*@
+
+
+    @*Hidden Field*@
+    <input type="hidden" name="CountTotalRow" id="countTotalRow" value="@Model.CountTotalRow" />
+    <input type="hidden" name="CountRow" id="countRow" value="@Model.CountRow" />
+    <input type="hidden" name="Take" id="take" value="@Model.Take" />
+    <input type="hidden" name="Skip" id="skip" value="@Model.Skip" />
+    <input type="hidden" name="Row" id="row" value="@row" />
+
+
+
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        <script src="~/js/ListLifeInsuranceJavaScript.js"></script>
+    }
